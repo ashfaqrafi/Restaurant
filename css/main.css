@@ -1,0 +1,1272 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+   @font-face { 
+    font-family: 'Bebas Neue';
+    src: url('../fonts/bebas_neue/BebasNeue\ Regular.otf') format('otf');
+    src: url('../fonts/bebas_neue/BebasNeue\ Light.otf') format('otf');
+    src: url('../fonts/bebas_neue/BebasNeue\ Thin.otf') format('otf');
+    src: url('../fonts/bebas_neue/BebasNeue\ Book.otf') format('otf');
+    src: url('../fonts/bebas_neue/BebasNeue\ Bold.otf') format('otf');
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  button:hover{
+      background: inherit;
+  }
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* tabs style */
+
+@media (min-width: 768px) {
+    .panel-heading {
+      display: none;
+    }
+    .panel {
+      border: none;
+      box-shadow: none;
+    }
+    .panel-collapse {
+      height: auto;
+    }
+    .panel-collapse.collapse {
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .tab-content .tab-pane {
+      display: block;
+    }
+    .nav-tabs {
+      display: none;
+    }
+    .panel-title a {
+      display: block;
+      color: #D60016;
+    }
+    .panel {
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+      margin-top: -2px;
+    }
+    .tab-pane:first-child .panel {
+      border-radius: 5px 5px 0 0;
+    }
+    .tab-pane:last-child .panel {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+
+  .wid-100vw{
+      width: 100vw;
+  }
+
+  .res-logo{
+      width: 160px;
+      height: 91px;
+  }
+
+  .mtop-3{
+      margin-top: 3rem;
+  }
+
+  .mbot-3{
+      margin-bottom: 3rem;
+  }
+
+  .footer-txt-bold{
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #2b2b2b;
+  }
+
+  .footer-txt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #898989;
+  }
+  .footer-head{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #2b2b2b;
+  }
+
+  .footer-link ul li a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #898989; 
+  }
+
+  .footer-link ul li a:hover{
+      color: #D60016;
+      text-decoration: none;
+  }
+
+  .footer-copy{
+    margin-top: 3rem;  
+    padding-top: 1rem;
+    padding-bottom: 1rem;  
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #aeaeae;
+    text-align: center;
+    border-top: 1px solid #ebebeb;
+  }
+
+  .add-cart-txt{
+    margin-bottom: 3rem;  
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #86847e;
+    font-style: italic;
+    text-align: center
+  }
+
+  .cart-bttn{
+    background-color: #d90000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .cart-bttn:hover, .cart-bttn:focus, .cart-bttn:active{
+      background-color: crimson !important;
+  }
+
+  .add-cart-banner{
+      background-color: #fef3dd;
+  }
+
+  .wid-11rem{
+      width: 11rem;
+  }
+
+  .txt-left{
+      text-align: left;
+  }
+
+  .fll{
+      float: left;
+  }
+
+  .flr{
+      float: right;
+  }
+
+  .grey-icon{
+      color: #c4c4c4;
+  }
+
+  .mright-1{
+      margin-right: 1rem;
+  }
+
+  .bor-bot{
+      border-bottom: 1px solid #D60016;
+  }
+
+  .book-txt{
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  .book-bigtxt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    color: #D60016;
+  }
+
+  .book-form-txt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #c4c4c4;
+  }
+
+  ::placeholder { /* Most modern browsers support this now. */
+        font-style: italic;
+        color: #c4c4c4;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+ }
+
+ .cart-bigtxt{
+    padding-top: 1rem; 
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+ }
+
+ .txt-center{
+     text-align: center;
+ }
+
+ .pad-top-1{
+     padding-top: 1rem;
+ }
+
+ .pad-bot-1{
+     padding-bottom: 1rem;
+ }
+
+ .pos-rel{
+     position: relative;
+ }
+
+ .img-pos{
+     position: absolute;
+     top: -4rem;
+     left: 0;
+ }
+
+ .margin-right-1{
+     margin-right: 1rem;
+ }
+
+ .curp{
+     cursor: pointer;
+ }
+
+ .menu-txt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+ }
+
+ .menu-small-txt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333; 
+ }
+
+ .menu-link{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #D60016;
+    
+ }
+
+ .img-abs{
+     position: absolute;
+     top: 2rem;
+     left: -3rem;
+ }
+
+ .txt-underline{
+    text-decoration: underline;
+ }
+
+ .bor-right{
+     border-right: 3px solid #D60016;
+ }
+
+.menu-header{
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.menu-bold{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: #D60016;
+}
+.menu-elem{
+    position: relative;
+}
+.menu-elem::after{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 18px;
+    background: #222;
+    width: 3rem;
+    height: 3px;
+    margin-left: 1rem;
+}
+
+.menu-elem::before{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 18px;
+    background: #222;
+    width: 3rem;
+    height: 3px;
+    margin-left: -4rem;
+}
+
+.red-bg{
+    background: #D60016;
+    color: #fff !important;
+    border: 3px solid #D60016;
+}
+
+.menu-nav .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 0;
+}
+
+.menu-nav .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+    border: none;
+    border-radius: 0;
+    color: #fff;
+}
+
+.menu-nav .nav-tabs .nav-link:focus, .nav-tabs .nav-link{
+    color: #fff;
+}
+
+.txt-right{
+    text-align: right;
+}
+
+.moto-txt{
+    position: relative;
+}
+
+.moto-txt:after{
+    position: absolute;
+    top: 2rem;
+    right: 0rem;
+    width: 2rem;
+    height: 2px;
+    content: '';
+    background: #D60016; 
+}
+
+.moto-para{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.mr-7{
+    margin-right: -7rem;
+}
+
+.mleft-4{
+    margin-left: -4rem;
+}
+
+.moto-txt-r{
+    position: relative;
+}
+
+.moto-txt-r:after{
+    position: absolute;
+    top: 2rem;
+    left: 0rem;
+    width: 2rem;
+    height: 2px;
+    content: '';
+    background: #D60016; 
+}
+
+.txt-left{
+    text-align: left;
+}
+
+.offer-txt{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.dib{
+    display: inline-block;
+}
+
+.offer-stxt{
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    font-weight: 600;
+    color: #cb9f6b;
+}
+
+.offer-head{
+    position: relative;
+    font-family: 'Bebas Neue';
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.offer-lasttxt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.offer-lasttxt::after{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #fff;
+    bottom: 2rem;
+    left: 0rem;
+}
+
+.offer-last{
+    font-family: 'Bebas Neue';
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-top: 1rem;
+}
+
+.offer-gold::after{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #fff;
+    bottom: 5rem;
+    left: 0rem;
+}
+
+.offer-btxt{
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+    font-weight: 600;
+    color: #cb9f6b;
+    margin-left: 2rem;
+}
+
+.offer-btxt::after{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #fff;
+    bottom: 0rem;
+    left: 0rem;
+}
+
+.offer-head::after{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #fff;
+    bottom: 0rem;
+    left: 0rem;
+}
+
+.offer-p{
+    position: relative;
+    margin-bottom: 0;
+}
+.offer-p::after{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #cb9f6b;
+    bottom: 0rem;
+    left: 0rem;
+}
+
+.bg-black{
+    background: #1A1A19;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link:hover{
+    color: #fff;
+}
+
+.navbar{
+    padding-top: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-item.dropdown{
+    color: #fff;
+}
+
+.gold-col{
+    color: #ffae00;
+}
+
+.bold-txt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 1rem; 
+}
+
+.nav-item{
+    margin: 1rem;
+}
+
+.mid-pos .nav-item{
+    margin: 0;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+    position: relative;
+}
+
+.navbar-light .navbar-nav .active>.nav-link:after{
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    content: '';
+    background: #D60016;
+}
+
+.txt-rot{
+   -webkit-transform: rotate(-10deg); 
+    -moz-transform: rotate(-10deg);
+    font-style: italic;
+}
+
+.my-carousel{
+    position: absolute;
+    top: 0;
+}
+
+.my-nav{
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    background: none;
+    border: 0;
+    border-radius: 0;
+}
+
+.mtop-45{
+    margin-top: 45rem;
+}
+
+.cover-text{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    color: #fff;
+}
+
+.cover-1{
+    font-family: 'Bebas Neue';
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.cover-1::after{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    background: #fff;
+    width: 7rem;
+    height: 2px;
+    margin-left: 1rem;
+}
+
+.cover-1::before{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    background: #fff;
+    width: 7rem;
+    height: 2px;
+    margin-left: -8rem;
+}
+
+.cover-2{
+    font-family: 'Bebas Neue';
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.cover-3{
+    position: relative;
+    font-family: 'Bebas Neue';
+    font-size: 70px;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+
+.cover-3:after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 1px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 2px;
+}
+
+.cover-4{
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.cover-yellow{
+    position: absolute;
+    /* width: 20rem;
+    height: 20rem;
+    background: #ffae00; */
+    top: 27%;
+    left: 23%;
+    /* border-radius: 100%; */
+}
+
+.mbot-0{
+    margin-bottom: 0;
+}
+
+.mtop-m3{
+    margin-top: -3rem;
+}
+
+.active-menu{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #d90000 !important;
+}
+
+.opa-03{
+    opacity: 0.3;
+}
+
+.menu-bottom{
+    padding: 1rem;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.card-5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+  .moto-circle{
+      border: 2px solid #D60016;
+      border-radius: 100%;
+      width: 4rem;
+      height: 4rem; 
+      position: relative;
+  }
+
+  .fill-red{
+      background: #D60016;
+  }
+
+  .moto-circle-1{
+    border: 1px solid #D60016;
+    border-radius: 100%;
+    width: 3.25rem;
+    height: 3.25rem;
+    margin-left: 0.2rem;
+    margin-top: 0.3rem;
+  }
+
+  .pos-icon-moto{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+.flex-menu:after{
+    position: absolute;
+    left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      bottom: 0;
+      background: #D60016;
+      width: 3rem;
+      height: 1px;
+      z-index: 1000;
+      content: '';
+}
+
+  .parallax { 
+    /* The image used */
+    background-image: url("../img/cta-parallax.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mobile-nav .black-bg{
+      background: #1F1F21;
+  }
+
+  .white-bg{
+      background: #fff;
+  }
+
+  .mobile-nav .logo-size{
+      width: 5rem;
+  }
+
+  .mobile-nav .logo-size img{
+      width: 100%;
+      height: 100%;
+  }
+
+  .mobile-nav .navbar{
+      padding-top: 0;
+  }
+
+  .mobile-nav .navbar-toggler{
+      padding: 0.25rem;
+      font-size: 1rem;
+  }
+
+/* media queries */
+  
+@media screen 
+  and (min-device-width: 1367px) { 
+    .mtop-45{
+        margin-top: 60rem;
+    }
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+@media (min-width: 320px)  and (max-width: 575px) {
+    .mr-7{
+        margin-right: 0rem;
+    }
+
+    .mleft-4{
+        margin-left: 0rem;
+    }
+
+    .ml-o{
+        margin-left: 0rem;
+    }
+
+    .menu-bold{
+        font-size: 35px;
+    }
+
+    .img-pos{
+        position: relative;
+        margin-top: 1rem;
+        top: 0rem;
+    }
+
+    .img-abs{
+        position: relative;
+        left: 0rem;
+        top: 0rem;
+    }
+
+    .cover-yellow{
+        width: 7rem;
+    }
+
+    .cover-yellow img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mtop-45{
+        margin-top: 2rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .mr-7{
+        margin-right: 0rem;
+    }
+
+    .mleft-4{
+        margin-left: 0rem;
+    }
+
+    .ml-o{
+        margin-left: 0rem;
+    }
+
+    .menu-bold{
+        font-size: 35px;
+    }
+
+    .img-pos{
+        position: relative;
+        margin-top: 1rem;
+        top: 0rem;
+    }
+
+    .img-abs{
+        position: relative;
+        left: 0rem;
+        top: 0rem;
+    }
+
+    .cover-yellow{
+        width: 7rem;
+    }
+
+    .cover-yellow img {
+        width: 100%;
+        height: 100%;
+    }
+    .mtop-45{
+        margin-top: 2rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) { 
+    .mr-7{
+        margin-right: 0rem;
+    }
+
+    /* .mleft-4{
+        margin-left: 0rem;
+    } */
+
+    .ml-o{
+        margin-left: -4rem;
+    }
+
+    .menu-bold{
+        font-size: 35px;
+    }
+
+    .img-pos{
+        position: relative;
+        margin-top: 1rem;
+        top: 0rem;
+    }
+
+    .img-abs{
+        position: relative;
+        left: 0rem;
+        top: 0rem;
+    }
+
+    .cover-yellow{
+        width: 14rem;
+    }
+
+    .cover-yellow img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mtop-45{
+        margin-top: 2rem;
+    }
+
+    .menu-link{
+        font-size: 14px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
+
+ /* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 1024px) 
+and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .mtop-45{
+        margin-top: 32rem;
+    }
+
+    .cover-yellow{
+        width: 20rem;
+    }
+
+    .cover-yellow img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-item{
+        margin: 0.25rem;
+    }
+
+    .img-abs{
+        left: -1rem;
+    }
+
+}
+
+
+
